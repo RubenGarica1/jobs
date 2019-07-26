@@ -1,7 +1,7 @@
 
 
  var CronJob = require('cron').CronJob;
- const datos = [{name: "ruben", date:"0 5 10 25 07 *"}, {name:'ada', date :"0 10 10 25 07 *"} ]
+ const datos = [{name: "ruben", date:"0 48 14 25 07 *"}, {name:'ada', date :"0 10 10 25 07 *"} ]
  datos.forEach(res =>{
      new CronJob(res.date, function() {
         console.log(`--------------------------${res.name}-----------------------------------`)
@@ -11,6 +11,6 @@
 })
 
 
-new CronJob('0 0 8 25 07 *', function() {
+new CronJob('0 51 14 * * *', function() {
   console.log('You will see this message every second');
 }, null, true, 'America/Los_Angeles');
